@@ -159,12 +159,12 @@ GOTO:eof
 	ECHO.
 	ECHO AddASM projectName [/d ^| /e] [/f] [fileName]
 	ECHO.
-	ECHO 	projectName		Name of the project to add the file.
+	ECHO 	projectName		Name of the project to add the file
 	ECHO 	[/d ^| /e]
-	ECHO 		/d				Specifies default file template.
-	ECHO 		/e				Specifies empty file template.
-	ECHO 	[/f]			Fill .asm with fill values (Create date, Project Name, etc.).
-	ECHO 	fileName		Name of the file. Defaults to project name when not present.
+	ECHO 		/d		Specifies default file template
+	ECHO 		/e		Specifies empty file template
+	ECHO 	[/f]			Fill .asm with fill values (Create date, Project Name, etc.)
+	ECHO 	fileName		Name of the file. Defaults to project name when not present
 	GOTO:eof
 
 :echoERROR

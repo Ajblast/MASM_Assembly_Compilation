@@ -116,9 +116,9 @@ GOTO:eof
 	ECHO.
 	ECHO 	projectName				Name of the project.
 	ECHO 	[/i]					Create an include folder
-	ECHO 	[/e	^| {/c fileName}]		
-	ECHO		/e					Indicates to not create a .asm file
-	ECHO 		/c					Create a .asm with file name
+	ECHO 	[/e ^| {/c fileName}]		
+	ECHO 		/e				Indicates to not create a .asm file
+	ECHO 		/c				Create a .asm with file name
 	ECHO 		fileName			Name of the file.
 	GOTO:eof
 	

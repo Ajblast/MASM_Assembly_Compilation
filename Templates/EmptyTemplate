@@ -1,0 +1,25 @@
+;******************************************************************************************
+;*	ProgramName:	<ProgramName>
+;*	Programmer:		Austin Kincer
+;*	Class:			CSCI 2160-001
+;*	Lab:			<Lab/Homework/ProjectName>
+;*	Date:			<CreationDate>
+;*	Purpose:		<Description>
+;******************************************************************************************
+
+	.486			;tells the assembler we are working with 32-bit code
+	.model flat		;tells the assembler we have a flat memory model - all addresses 32 bit
+	.stack 100h		;tells the assembler how many bytes we want on the stack (256)
+	
+	;tells the operating system (OS) to clean up our running program
+	ExitProcess	PROTO	Near32	STDCALL	dwExitCode:DWORD
+
+	.data			;Data Segment
+
+	.code			;Code Segment
+_start:				;label for OS -- tells where to start execution
+	MOV EAX, 0		;For debugging
+
+	INVOKE ExitProcess, 0	;0 = normal termination in OS-land	
+PUBLIC _start		;tells the linker this is a global label -- single entry point
+END					;tells the assembler to ignore all instructions beyond this point

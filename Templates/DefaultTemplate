@@ -1,0 +1,39 @@
+;******************************************************************************************
+;*	ProgramName:	<ProgramName>
+;*	Programmer:		Austin Kincer
+;*	Class:			CSCI 2160-001
+;*	Lab:			<Lab/Homework/ProjectName>
+;*	Date:			<CreationDate>
+;*	Purpose:		<Description>
+;******************************************************************************************
+
+	.486			;tells the assembler we are working with 32-bit code
+	.model flat		;tells the assembler we have a flat memory model - all addresses 32 bit
+	.stack 100h		;tells the assembler how many bytes we want on the stack (256)
+	
+	;tells the operating system (OS) to clean up our running program
+	ExitProcess	PROTO	Near32	STDCALL	dwExitCode:DWORD
+	;print a string to the console
+	putstring 	PROTO 	Near32 	STDCALL, 	lpString:DWORD
+
+	.data			;Data Segment
+strName		BYTE	13, 10, 9, " Name:	Austin Kincer", 0
+strClass	BYTE	13, 10, 9, "Class:	CSCI 2160-001", 0
+strDate		BYTE	13, 10, 9, " Date:	<CreationDate>", 0
+strLab		BYTE	13, 10, 9, "  Lab:	<Lab/Homework/ProjectName>", 0
+
+	.code			;Code Segment
+_start:				;label for OS -- tells where to start execution
+	MOV EAX, 0		;For debugging
+
+	;1
+	INVOKE putstring, 	ADDR strName		;display strName
+	INVOKE putstring, 	ADDR strClass		;display strClass
+	INVOKE putstring, 	ADDR strDate		;display strDate
+	INVOKE putstring, 	ADDR strLab			;display strLab
+
+
+
+	INVOKE ExitProcess, 0	;0 = normal termination in OS-land	
+PUBLIC _start		;tells the linker this is a global label -- single entry point
+END					;tells the assembler to ignore all instructions beyond this point

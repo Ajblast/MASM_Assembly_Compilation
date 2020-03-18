@@ -1,5 +1,5 @@
 # MASM_Assembly_Compilation
-Simple batch scripts to make assembling/link/debug process easier.
+Simple batch scripts to make assemble/link/debug process easier.
 
 
 # Batch Scripts

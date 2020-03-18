@@ -1,9 +1,8 @@
 # MASM_Assembly_Compilation
 Simple batch scripts to make assemble/link/debug process easier.
 
-
-# Batch Scripts
 ---
+# Batch Scripts
 ## Assemble
 Assemble files in a project/path structure
 
@@ -127,13 +126,13 @@ projectName		Name of the project to add the file
 fileName		Name of the file. Defaults to project name when not present
 ```
 
-# Files
 ---
+# Files
 ## LinkableFileTypes.txt
 File containing all of the linkable extensions.
 
-# Templates
 ---
+# Templates
   Currently only two types of file templates are supported. Dynamic templates are to come.
 
 ## Default
